@@ -1,0 +1,20 @@
+server:
+  servlet:
+    context-path: /carshop
+  port: 81
+
+spring:
+  resources:
+    static-locations: classpath:/static/, classpath:/template/
+  application:
+    name: carshop
+  datasource:
+    username: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: 123456
+    url: jdbc:mysql://127.0.0.1:3306/carshop?characterEncoding=UTF8&useSSL=false&serverTimezone=UTC
+mybatis:
+  type-aliases-package: com.oracle.carshop.domain.model
+  mapper-locations: classpath:mapperconfig/*.xml
+  env:
+     test
